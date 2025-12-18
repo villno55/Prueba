@@ -1,33 +1,67 @@
 Backend SISPA
 
-Este proyecto corresponde al backend del sistema SISPA se expone una API REST que permite crear, consultar, actualizar y eliminar usuarios (crud).  
-Las pruebas las realizo mediante Postman, que actúa como cliente, mientras el backend funciona como servidor.
+Este proyecto corresponde al **backend del sistema SISPA**.  
+Se implementa una **API REST** que permite realizar operaciones **CRUD** (crear, consultar, actualizar y eliminar usuarios).
 
- Tecnologías
-Node.js – Express – MongoDB Atlas – Mongoose – Render
+Las pruebas del sistema se realizan siguiendo el modelo **cliente-servidor**, donde:
+- El **backend** actúa como servidor
+- El **cliente** puede ser Postman o una aplicación web
 
 
-El desarrollo y las pruebas del backend se realizaron completamente desde la nube, ya que no conte con un computador disponible permanentemente para trabajar en casa,aunq si disponia de uno en clase. Así q base de datos la  configure en MongoDB Atlas (nube).
-El backend se desplegó en Render, quedando accesible mediante una URL pública.
 
-Las pruebas del CRUD se realizaron mediante Postman, actuando como cliente del servidor y facilitando mi problematica.
+Tecnologías utilizadas
+- Node.js
+- Express
+- MongoDB Atlas
+- Mongoose
+- Render
 
- URL del servidor
+
+Despliegue en la nube
+
+El desarrollo y las pruebas del backend se realizaron completamente desde la **nube**, debido a la disponibilidad limitada de equipos.
+
+Los datos se almacenan en MongoDB Atlas
+
+El backend puede ser probado desde cualquier dispositivo con acceso a internet
+
+El backend fue desplegado en **Render**, quedando accesible mediante una URL pública.
+
+URL del backend
+
 https://back-sispa.onrender.com/usuarios
 
- Endpoints 
 
-json para probar a la hora de hacer el post,get,etc desde postman
+Pruebas del CRUD
 
+Opción 1: Postman (cliente)
+Las pruebas CRUD se realizaron mediante **Postman**, que actúa como cliente consumiendo la API REST.
+
+JSON de ejemplo para POST
+json
 {
-  "nombre": "vinicius daniel",
-  "apellido": "moreira",
+  "nombre": "Vinicius Daniel",
+  "apellido": "Moreira",
   "documento": "110956678",
   "crreo_institu": "vinimore@sena.edu.co"
 }
- 
 
-ALTERNATIVA AL POSTMAN
+Con el ID generado se pueden realizar:
+
+GET (listar o buscar)
+
+PUT (actualizar)
+
+DELETE (eliminar)
+
+Opción 2: Aplicación web (cliente)
+
+También se desarrolló una aplicación web básica que permite realizar las operaciones CRUD sin necesidad de Postman.
+
+URL del cliente web:
+
+https://villno55.github.io/front_sispa/
+
 
 
 
